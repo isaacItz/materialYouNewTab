@@ -79,7 +79,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 
 // ---------------------------end of weather stuff--------------------
-function display(){
+function display() {
     var currentTime = new Date();
     let hours = currentTime.getHours();
     var minutes = currentTime.getMinutes();
@@ -117,10 +117,10 @@ setInterval(display, 1000); // To update the time every second
 
 // Showing border or outline in when you click on searchbar
 const searchbar = document.getElementById('searchbar');
-searchbar.addEventListener('click', function () {
+searchbar.addEventListener('click', function() {
     searchbar.classList.toggle('active'); // Toggle the 'active' class
 });
-document.addEventListener('click', function (event) {
+document.addEventListener('click', function(event) {
     // Check if the clicked element is not the searchbar
     if (!searchbar.contains(event.target)) {
         searchbar.classList.remove('active'); // Remove the 'active' class
@@ -175,16 +175,16 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("selectedSearchEngine", selectedOption);
         });
     });
-     // -----The stay changed even if user reload the page---
+    // -----The stay changed even if user reload the page---
     //  🔴🟠🟡🟢🔵🟣⚫️⚪️🟤
-     const storedTheme = localStorage.getItem(themeStorageKey);
-     if (storedTheme) {
-         applySelectedTheme(storedTheme);
-         const selectedRadioButton = document.querySelector(`.colorPlate[value="${storedTheme}"]`);
-         if (selectedRadioButton) {
-             selectedRadioButton.checked = true;
-         }
-     }
+    const storedTheme = localStorage.getItem(themeStorageKey);
+    if (storedTheme) {
+        applySelectedTheme(storedTheme);
+        const selectedRadioButton = document.querySelector(`.colorPlate[value="${storedTheme}"]`);
+        if (selectedRadioButton) {
+            selectedRadioButton.checked = true;
+        }
+    }
 
 });
 
@@ -195,27 +195,26 @@ const radioButtons = document.querySelectorAll('.colorPlate');
 const themeStorageKey = 'selectedTheme';
 
 const applySelectedTheme = (colorValue) => {
-    if (colorValue != "blue") {
-        document.documentElement.style.setProperty('--bg-color-blue', `var(--bg-color-${colorValue})`);
-        document.documentElement.style.setProperty('--accentLightTint-blue', `var(--accentLightTint-${colorValue})`);
-        document.documentElement.style.setProperty('--darkerColor-blue', `var(--darkerColor-${colorValue})`);
-        document.documentElement.style.setProperty('--darkColor-blue', `var(--darkColor-${colorValue})`);
-        document.documentElement.style.setProperty('--textColorDark-blue', `var(--textColorDark-${colorValue})`);
+    if (colorValue != "dark") {
+        document.documentElement.style.setProperty('--bg-color-dark', `var(--bg-color-${colorValue})`);
+        document.documentElement.style.setProperty('--accentLightTint-dark', `var(--accentLightTint-${colorValue})`);
+        document.documentElement.style.setProperty('--darkerColor-dark', `var(--darkerColor-${colorValue})`);
+        document.documentElement.style.setProperty('--darkColor-dark', `var(--darkColor-${colorValue})`);
+        document.documentElement.style.setProperty('--textColorDark-dark', `var(--textColorDark-${colorValue})`);
     } else {
-        document.documentElement.style.setProperty('--bg-color-blue', '#BBD6FD');
-        document.documentElement.style.setProperty('--accentLightTint-blue', '#E2EEFF');
-        document.documentElement.style.setProperty('--darkerColor-blue', '#3569b2');
-        document.documentElement.style.setProperty('--darkColor-blue', '#4382EC');
-        document.documentElement.style.setProperty('--textColorDark-blue', '#1b3041');
+        document.documentElement.style.setProperty('--bg-color-dark', '#000000');
+        document.documentElement.style.setProperty('--accentLightTint-dark', '#323232');
+        document.documentElement.style.setProperty('--darkColor-dark', '#505050');
+        document.documentElement.style.setProperty('--textColorDark-dark', '#FFFFFF');
     }
     if (colorValue === "dark") {
         // Please note: The dark theme is currently under development and may have issues.
-        alert("Please note: The dark theme is currently under development and may have issues.")
+        //alert("Please note: The dark theme is currently under development and may have issues.")
     }
 };
 
 radioButtons.forEach(radioButton => {
-    radioButton.addEventListener('change', function () {
+    radioButton.addEventListener('change', function() {
         if (this.checked) {
             const colorValue = this.value;
             localStorage.setItem(themeStorageKey, colorValue);
@@ -232,7 +231,7 @@ const storedValue = localStorage.getItem("userText");
 if (storedValue) {
     userTextDiv.textContent = storedValue;
 }
-userTextDiv.addEventListener("input", function () {
+userTextDiv.addEventListener("input", function() {
     localStorage.setItem("userText", userTextDiv.textContent);
 });
 // end of user entered text stufff
@@ -311,7 +310,7 @@ document.getElementById("menuCloseButton").onclick = () => {
 }
 
 // ---------------------------------------------------------
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const shortcuts = document.getElementById("shortcutsContainer");
     const aiToolsCont = document.getElementById("aiToolsCont");
     const shortcutsCheckbox = document.getElementById("shortcutsCheckbox");
@@ -354,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadDisplayStatus("aiToolsDisplayStatus", aiToolsCont);
 
     // Add change event listeners for the checkboxes
-    shortcutsCheckbox.addEventListener("change", function () {
+    shortcutsCheckbox.addEventListener("change", function() {
         saveCheckboxState("shortcutsCheckboxState", shortcutsCheckbox);
         if (shortcutsCheckbox.checked) {
             shortcuts.style.display = "flex";
@@ -365,7 +364,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    aiToolsCheckbox.addEventListener("change", function () {
+    aiToolsCheckbox.addEventListener("change", function() {
         saveCheckboxState("aiToolsCheckboxState", aiToolsCheckbox);
         if (aiToolsCheckbox.checked) {
             aiToolsCont.style.display = "flex";

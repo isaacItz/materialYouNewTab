@@ -82,28 +82,32 @@
     --round: 30px;
 }
 
+/* fix Fells like color in dark mode */
+#feelsLike {
+    color: #000;
+}
 /* Theme */
 /* ⚫🟣🔵🔴🟡🟢🟠⚪ */
 
 .accentColor {
-    fill: var(--darkColor-blue);
+    fill: var(--darkColor-dark);
 }
 
 .bgLightTint {
-    fill: var(--accentLightTint-blue);
-    background-color: var(--accentLightTint-blue);
+    fill: var(--accentLightTint-dark);
+    background-color: var(--accentLightTint-dark);
 }
 
 .lessDark {
-    background-color: var(--bg-color-blue);
-    fill: var(--bg-color-blue);
+    background-color: var(--bg-color-dark);
+    fill: var(--bg-color-dark);
 }
 
 /* ⚫🟣🟡🔵🔴🟠⚪🟢 */
 
 body {
-    background-color: var(--bg-color-blue);
-    color: var(--textColorDark-blue);
+    background-color: var(--bg-color-dark);
+    color: var(--textColorDark-dark);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,7 +161,7 @@ body {
     position: absolute;
     width: 20px;
     height: 100px;
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
     top: -90px;
     transform-origin: bottom;
     border-radius: 10px;
@@ -166,7 +170,7 @@ body {
 #hour {
     height: 80px;
     top: -70px;
-    background-color: var(--darkerColor-blue);
+    background-color: var(--darkerColor-dark);
     transform: rotate(90deg);
 }
 
@@ -175,7 +179,7 @@ body {
     position: absolute;
     width: 20px;
     height: 30px;
-    background-color: var(--darkerColor-blue);
+    background-color: var(--darkerColor-dark);
     bottom: -10px;
     border-radius: 100px;
 }
@@ -189,7 +193,7 @@ body {
     position: absolute;
     width: 20px;
     height: 30px;
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
     bottom: -10px;
     border-radius: 100px;
 }
@@ -203,7 +207,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
     top: -28px;
     border-radius: 100%;
 }
@@ -259,7 +263,7 @@ body {
 
 #conditionText {
     font-size: 1.2rem;
-    color: var(--textColorDark-blue);
+    color: var(--textColorDark-dark);
 }
 
 .cconnt {
@@ -286,7 +290,7 @@ body {
 }
 
 .tilesContainer .location {
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
 }
 
 .tilesContainer .location .location_spn {
@@ -307,7 +311,7 @@ body {
     left: 46px;
     bottom: 0;
     margin: auto;
-    color: var(--textColorDark-blue);
+    color: var(--textColorDark-dark);
     height: fit-content;
 }
 
@@ -327,7 +331,7 @@ body {
     width: 40px;
     background: url("./svgs/humidity.svg") center center no-repeat;
     background-size: 66%;
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
     right: 0;
     border-radius: 100%;
 }
@@ -348,7 +352,7 @@ body {
     width: calc(10% - 60px);
     /*100-60px because humdityIconContainer is 40px Width and 20px is margin which is = to 60*/
     min-width: 42%;
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
     border-radius: 100px;
     position: absolute;
     transition: width 1s;
@@ -404,7 +408,7 @@ body {
 #temp {
     font-size: 3.5rem;
     font-weight: bold;
-    color: var(--darkerColor-blue);
+    color: var(--darkerColor-dark);
     /* background-color: yellow; */
     margin: auto;
     width: fit-content;
@@ -428,14 +432,14 @@ body {
     width: 100%;
     height: 60px;
     border-radius: var(--round);
-    /* background-color: var(--accentLightTint-blue); */
+    /* background-color: var(--accentLightTint-dark); */
     position: relative;
     outline: 2px solid #00000000;
     transition: outline 0.3s;
 }
 
 .searchbar.active {
-    outline: 2px solid var(--darkColor-blue);
+    outline: 2px solid var(--darkColor-dark);
 }
 
 .searchbar .searchIcon {
@@ -474,13 +478,13 @@ body {
     padding: 0px 26px;
     border: none;
     font-size: 1.1rem;
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
     color: white;
     transition: all 0.3s;
 }
 
 #enterBtn:hover {
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
     color: #fff;
     cursor: pointer;
 }
@@ -500,7 +504,7 @@ body {
 }
 
 .searchWithCont .hint {
-    /* background-color: var(--accentLightTint-blue); */
+    /* background-color: var(--accentLightTint-dark); */
     width: 200px;
     height: 100px;
     display: flex;
@@ -517,7 +521,7 @@ body {
     position: absolute;
     width: 6px;
     height: 100%;
-    background-color: var(--accentLightTint-blue);
+    background-color: var(--accentLightTint-dark);
     border-radius: 3px;
     right: -20px;
 }
@@ -528,7 +532,7 @@ body {
 }
 
 .searchEnginesContainer .search-engine {
-    /* background-color: var(--accentLightTint-blue); */
+    /* background-color: var(--accentLightTint-dark); */
     border-radius: 20px;
     height: fit-content;
     height: 40px;
@@ -569,7 +573,7 @@ body {
 }
 
 .search-engine input[type="radio"]:checked {
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
 }
 
 /* -----------Radio Button Customizing------------ */
@@ -586,7 +590,7 @@ body {
     align-items: center;
 }
 .colorsContainer {
-    background-color: var(--accentLightTint-blue);
+    background-color: var(--accentLightTint-dark);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -695,7 +699,7 @@ body {
     /* background-color: #000000d7; */
     width: fit-content;
     text-align: center;
-    color: var(--textColorDark-blue);
+    color: var(--textColorDark-dark);
     opacity: 0;
     transition: all 0.3s;
     font-size: 1rem;
@@ -707,7 +711,7 @@ body {
 }
 
 .shortcutsContainer .shortcuts a {
-    background-color: var(--accentLightTint-blue);
+    background-color: var(--accentLightTint-dark);
     border-radius: 100px;
     display: block;
     height: 50px;
@@ -738,7 +742,7 @@ body {
 }
 
 .aiToolsCont .hangno {
-    background-color: var(--accentLightTint-blue);
+    background-color: var(--accentLightTint-dark);
     height: 100%;
     display: flex;
     align-items: center;
@@ -756,7 +760,7 @@ body {
 
 .aiToolsCont .hangno .label {
     font-size: 1rem;
-    color: var(--textColorDark-blue);
+    color: var(--textColorDark-dark);
     cursor: default;
 }
 
@@ -778,13 +782,13 @@ body {
     position: absolute;
     height: 100%;
     width: 6px;
-    background-color: var(--accentLightTint-blue);
+    background-color: var(--accentLightTint-dark);
     border-radius: 6px;
     left: -18px;
 }
 
 .aiToolsCont .toolsCont a {
-    background-color: var(--accentLightTint-blue);
+    background-color: var(--accentLightTint-dark);
     height: 100%;
     display: flex;
     align-items: center;
@@ -792,7 +796,7 @@ body {
     padding: 0px 16px;
     border-radius: 100px;
     text-decoration: none;
-    color: var(--textColorDark-blue);
+    color: var(--textColorDark-dark);
     font-size: 1rem;
 }
 
@@ -890,7 +894,7 @@ body {
     width: 400px;
     transition: all 0.5s;
     transform: translateX(100%);
-    background-color: var(--accentLightTint-blue);
+    background-color: var(--accentLightTint-dark);
     border-bottom-left-radius: var(--round);
 }
 
@@ -908,7 +912,7 @@ body {
     width: 100%;
     height: 140px;
     /*🚦🛺 🚜*/
-    background-color: var(--bg-color-blue);
+    background-color: var(--bg-color-dark);
     position: relative;
 }
 
@@ -917,7 +921,7 @@ body {
     content: "";
     width: 100%;
     height: var(--gap);
-    background-color: var(--accentLightTint-blue);
+    background-color: var(--accentLightTint-dark);
     border-top-left-radius: var(--round);
     border-top-right-radius: var(--round);
     bottom: 0;
@@ -928,7 +932,7 @@ body {
     /* background-color: yellow; */
     width: fit-content;
     height: fit-content;
-    color: var(--textColorDark-blue);
+    color: var(--textColorDark-dark);
     position: absolute;
     left: 0;
     right: 0;
@@ -960,10 +964,10 @@ body {
 }
 
 .tilesCont .tiles {
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
     border-radius: 20px;
     font-size: 1rem;
-    color: var(--accentLightTint-blue);
+    color: var(--accentLightTint-dark);
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -1005,7 +1009,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--bg-color-blue);
+    background-color: var(--bg-color-dark);
     /* Background color when off */
     transition: 0.4s;
     border-radius: 34px;
@@ -1019,7 +1023,7 @@ body {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: var(--accentLightTint-blue);
+    background-color: var(--accentLightTint-dark);
     /* Slider color when on */
     transition: 0.4s;
     border-radius: 50%;
@@ -1028,7 +1032,7 @@ body {
 
 /* Apply styles when the input is checked (on) */
 input:checked+.toggle {
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
     /* Background color when on */
 }
 
@@ -1065,11 +1069,11 @@ input:checked+.toggle:before {
 }
 .ttcont .texts .bigText {
     font-size: 1.2rem;
-    color: var(--textColorDark-blue);
+    color: var(--textColorDark-dark);
 }
 .ttcont .texts .infoText {
     font-size: 0.9rem;
-    color: var(--textColorDark-blue);
+    color: var(--textColorDark-dark);
     opacity: 0.86;
     margin-top: -3px;
 }
@@ -1081,13 +1085,13 @@ input:checked+.toggle:before {
 }
 .bottomer a{
     text-decoration: none;
-    color: var(--darkColor-blue);
+    color: var(--darkColor-dark);
     font-size: 1rem;
 }
 .bottomer button{
     border: none;
     color: #fff;
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
     padding: 6px 20px;
     font-size: 1rem;
     border-radius: 100px;
@@ -1110,7 +1114,7 @@ input:checked+.toggle:before {
     /* background-color: yellow; */
 }
 .colorsContainer {
-    background-color: var(--accentLightTint-blue);
+    background-color: var(--accentLightTint-dark);
     background-color: #ffffffe8;
     display: flex;
     align-items: center;
@@ -1198,7 +1202,7 @@ input:checked+.toggle:before {
     bottom: var(--gap);
     width: 50px;
     height: 50px;
-    background-color: var(--accentLightTint-blue);
+    background-color: var(--accentLightTint-dark);
     border-radius: 100%;
     cursor: pointer;
 }
@@ -1208,7 +1212,7 @@ input:checked+.toggle:before {
     width: 62%;
     height: 62%;
     border-radius: 100%;
-    border: 4px solid var(--darkColor-blue);
+    border: 4px solid var(--darkColor-dark);
     left: 0; right: 0; top: 0; bottom: 0;
     margin: auto;
 }
@@ -1218,7 +1222,7 @@ input:checked+.toggle:before {
     width: 40%;
     height: 40%;
     border-radius: 100%;
-    background-color: var(--darkColor-blue);
+    background-color: var(--darkColor-dark);
     left: 0; right: 0; top: 0; bottom: 0;
     margin: auto;
 }
@@ -1229,8 +1233,8 @@ input:checked+.toggle:before {
     bottom: var(--gap);
     width: 42px;
     max-width: 100%; /* Set max-width to fit-content initially */
-    background-color: var(--bg-color-blue);
-    color: var(--textColorDark-blue);
+    background-color: var(--bg-color-dark);
+    color: var(--textColorDark-dark);
     font-size: 1rem;
     display: flex;
     align-items: center;
